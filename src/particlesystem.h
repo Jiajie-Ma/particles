@@ -14,6 +14,7 @@ namespace agl {
       glm::vec4 color;
       float size;
       float mass;
+      float life;
    };
 
    class ParticleSystem {
@@ -21,7 +22,7 @@ namespace agl {
       ParticleSystem();
       virtual ~ParticleSystem();
 
-      void init(int size);
+      void init(int size, glm::vec3 _cameraPos);
       virtual void update(float dt) = 0;
       virtual void draw();
 
@@ -36,6 +37,7 @@ namespace agl {
       GLuint mTexture;
       BlendMode mBlendMode;
       static Renderer theRenderer;
+      glm::vec3 cameraPos;
    };
 }
 #endif

@@ -22,8 +22,9 @@ ParticleSystem::~ParticleSystem()
 {
 }
 
-void ParticleSystem::init(int size)
+void ParticleSystem::init(int size, glm::vec3 _cameraPos)
 {
+   cameraPos = _cameraPos;
    if (!theRenderer.initialized())
    {
       theRenderer.init("../shaders/billboard.vs", "../shaders/billboard.fs");

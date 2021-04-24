@@ -9,6 +9,10 @@ namespace agl {
    public:
       virtual void createParticles(int size) override;
       virtual void update(float dt) override;
+      void respawnParticles();
+   
+   protected:
+      float life = 1.5f;
    };
 }
 #endif

@@ -28,16 +28,12 @@ const float infinity = std::numeric_limits<float>::infinity();
 
 inline float random_float() 
 {
-   static std::uniform_real_distribution<float> distribution(0.0f, 1.0f);
-   static std::mt19937 generator;
-   return distribution(generator); 
+   return static_cast <float> (rand()) / static_cast <float> (RAND_MAX);
 }
 
 inline float random_float(float min, float max) 
 {
-   static std::uniform_real_distribution<float> distribution(min, max);
-   static std::mt19937 generator;
-   return distribution(generator);
+   return min + static_cast <float> (rand()) / static_cast <float> (RAND_MAX/(max - min));
 }
 
 inline glm::vec3 random_unit_cube() 
@@ -45,6 +41,14 @@ inline glm::vec3 random_unit_cube()
    float x = random_float(-0.5,0.5);
    float y = random_float(-0.5,0.5);
    float z = random_float(-0.5,0.5);
+   return glm::vec3(x, y, z);
+}
+
+inline glm::vec3 random_unit_rectangle() 
+{
+   float x = random_float(-0.8,0.8);
+   float y = random_float(-0.2,0.8);
+   float z = random_float(-0.8,0.8);
    return glm::vec3(x, y, z);
 }
 
