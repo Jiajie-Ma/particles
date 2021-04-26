@@ -53,4 +53,4 @@ Confetti Particle System
 
 Fireworks Particle System (using gravitational acceleration and particle life cycle)
 
-c
+![Fireworks Particle System](results/fireworks.gif)
