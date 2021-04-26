@@ -17,7 +17,7 @@ void MyParticleSystem::createParticles(int size)
   vec3 pos = random_unit_rectangle();
   for (int i = 0; i < size; i++)
   {
-    Particle p = {pos, random_unit_vector(), vec4(random_float(), random_float(), random_float(), random_float()), 0.1f, random_float(), 1.5f};
+    Particle p = {pos, random_unit_vector(), vec4(random_float(), random_float(), random_float(), 1.0f), 0.1f, random_float(), 1.5f};
     mParticles.push_back(p);
   }
 }

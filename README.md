@@ -49,8 +49,8 @@ particles/build $ ../bin/demo
 
 Confetti Particle System
 
-![Confetti Particle System](results/confetti.gif)
+![Confetti Particle System](results/confetti.mov)
 
 Fireworks Particle System (using gravitational acceleration and particle life cycle)
 
-![Fireworks Particle System](results/fireworks.gif)
+![Fireworks Particle System](results/fireworks.mov)
