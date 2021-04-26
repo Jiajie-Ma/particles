@@ -15,9 +15,10 @@ void MyParticleSystem::createParticles(int size)
   mTexture = theRenderer.loadTexture("../textures/particle.png");
   // initialize the list of particles based on the size
   vec3 pos = random_unit_rectangle();
+  vec3 color = vec3(random_float(), random_float(), random_float());
   for (int i = 0; i < size; i++)
   {
-    Particle p = {pos, random_unit_vector(), vec4(random_float(), random_float(), random_float(), 1.0f), 0.1f, random_float(), 1.5f};
+    Particle p = {pos, random_unit_vector(), vec4(color, 1.0f), 0.1f, random_float(), 1.5f};
     mParticles.push_back(p);
   }
 }
@@ -76,11 +77,12 @@ void MyParticleSystem::update(float dt)
 void MyParticleSystem::respawnParticles()
 {
    vec3 pos = random_unit_rectangle();
+   vec3 color = vec3(random_float(), random_float(), random_float());
    for (auto p = begin(mParticles); p != end(mParticles); p++)
    {
       p->pos = pos;
       p->vel = random_unit_vector();
-      p->color = vec4(random_float(), random_float(), random_float(), random_float());
+      p->color = vec4(color, 1.0f);
       p->life = 1.5f;
    }
 }
