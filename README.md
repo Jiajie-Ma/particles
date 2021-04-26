@@ -2,7 +2,7 @@
 
 Implements particle systems using openGL
 
-
+![Fireworks Particle System](results/fireworks.gif)
 
 ## How to build
 
@@ -49,8 +49,8 @@ particles/build $ ../bin/demo
 
 Confetti Particle System
 
-![Confetti Particle System](results/confetti.mov)
+![Confetti Particle System](results/confetti.gif)
 
 Fireworks Particle System (using gravitational acceleration and particle life cycle)
 
-![Fireworks Particle System](results/fireworks.mov)
+c
